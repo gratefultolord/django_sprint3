@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import Location, Category, Post
 
 admin.site.register(Location)

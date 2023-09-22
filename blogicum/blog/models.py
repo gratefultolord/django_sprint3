@@ -1,5 +1,7 @@
 from django.db import models
+
 from django.contrib.auth import get_user_model
+
 from core.models import PublishedDateModel
 
 User = get_user_model()
@@ -66,6 +68,7 @@ class Post(PublishedDateModel):
     class Meta:
         verbose_name = 'публикация'
         verbose_name_plural = 'Публикации'
+        ordering = ['-pub_date']
 
     def __str__(self):
         return self.title
